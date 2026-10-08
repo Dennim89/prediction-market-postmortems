@@ -1,0 +1,56 @@
+[
+  {
+    "id": "fake-event-0003",
+    "slug": "btc-updown-15m-1767226500",
+    "title": "Bitcoin Up or Down (synthetic, next window)",
+    "markets": [
+      {
+        "conditionId": "fake-condition-0002",
+        "outcomes": "[\"Up\", \"Down\"]",
+        "clobTokenIds": "[\"fake-token-up-0002\", \"fake-token-down-0002\"]"
+      }
+    ]
+  },
+  {
+    "id": "fake-event-0002",
+    "slug": "btc-updown-15m-1767225600",
+    "title": "Bitcoin Up or Down (synthetic, current window)",
+    "markets": [
+      {
+        "conditionId": "fake-condition-0001",
+        "outcomes": "[\"Up\", \"Down\"]",
+        "clobTokenIds": "[\"fake-token-up-0001\", \"fake-token-down-0001\"]"
+      }
+    ]
+  },
+  {
+    "id": "fake-event-0001",
+    "slug": "btc-updown-15m-1767224700",
+    "title": "Bitcoin Up or Down (synthetic, previous window)",
+    "markets": [
+      {
+        "conditionId": "fake-condition-0000",
+        "outcomes": "[\"Up\", \"Down\"]",
+        "clobTokenIds": "[\"fake-token-up-0000\", \"fake-token-down-0000\"]"
+      }
+    ]
+  },
+  {
+    "id": "fake-event-0004",
+    "slug": "btc-updown-1h-1767225600",
+    "title": "Bitcoin Up or Down (synthetic, hourly, ignored)",
+    "markets": [
+      {
+        "conditionId": "fake-condition-0099",
+        "outcomes": "[\"Up\", \"Down\"]",
+        "clobTokenIds": "[\"fake-token-up-0099\", \"fake-token-down-0099\"]"
+      }
+    ]
+  },
+  {
+    "id": "fake-event-0005",
+    "slug": "btc-updown-15m-1767225600",
+    "title": "Same window without markets (ignored)",
+    "markets": []
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "single_ms": {
+    "topic": "crypto_prices_chainlink",
+    "type": "update",
+    "timestamp": 1767225600500,
+    "payload": {"symbol": "btc/usd", "timestamp": 1767225600000, "value": 100000.5}
+  },
+  "batch": {
+    "topic": "crypto_prices_chainlink",
+    "type": "subscribe",
+    "payload": {
+      "symbol": "btc/usd",
+      "data": [
+        {"timestamp": 1767225601000, "value": 100001.0},
+        {"timestamp": 1767225603000, "value": 100003.0},
+        {"timestamp": 1767225602000, "value": 100002.0}
+      ]
+    }
+  },
+  "single_seconds": {
+    "topic": "crypto_prices_chainlink",
+    "type": "update",
+    "payload": {"symbol": "btc/usd", "timestamp": 1767225604, "value": 100004.0}
+  },
+  "other_symbol": {
+    "topic": "crypto_prices_chainlink",
+    "type": "update",
+    "payload": {"symbol": "eth/usd", "timestamp": 1767225605000, "value": 3500.0}
+  },
+  "out_of_range": {
+    "topic": "crypto_prices_chainlink",
+    "type": "update",
+    "payload": {"symbol": "btc/usd", "timestamp": 1767225606000, "value": 12.5}
+  },
+  "no_payload": {
+    "topic": "crypto_prices_chainlink",
+    "type": "update"
+  }
+}

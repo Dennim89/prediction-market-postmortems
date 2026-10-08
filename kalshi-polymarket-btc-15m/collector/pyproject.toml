@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pm-btc15m-collector"
+version = "0.1.0"
+description = "Read-only collector for Polymarket 15-minute BTC Up/Down markets: order books, BTC reference price, tick rows."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Denys" }]
+dependencies = [
+    "httpx>=0.25",
+    "websockets>=14.0",
+    "pydantic>=2.0",
+    "orjson>=3.9",
+    "python-dotenv>=1.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+pm-btc15m-collector = "collector.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["collector*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,30 @@
+# Copy to config.yaml and edit.  Values shown are the defaults.
+# Environment variables (see .env.example) override this file.
+
+providers:
+  market: polymarket   # polymarket | mock (synthetic, no network)
+  spot: rtds           # rtds | mock (synthetic, no network)
+
+polymarket:
+  gamma_url: https://gamma-api.polymarket.com
+  clob_url: https://clob.polymarket.com
+  rtds_url: wss://ws-live-data.polymarket.com
+  bitcoin_tag_id: "235"
+
+output:
+  dir: ./data
+  raw_subdir: raw
+  ticks_subdir: ticks
+
+intervals:
+  tick_interval_sec: 5
+  orderbook_poll_sec: 1
+  spot_poll_sec: 2
+  market_discovery_sec: 10
+  open_price_max_lag_sec: 5
+
+orderbook:
+  l2_depth: 10
+
+logging:
+  level: INFO
