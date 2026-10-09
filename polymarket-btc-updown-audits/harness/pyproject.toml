@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pm-updown-audit"
+version = "0.1.0"
+description = "Data audits and an evaluation harness for up/down prediction markets: label checks, lookahead and duplicate checks, fees, a time split and an in-sample sizing check."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Denys" }]
+dependencies = [
+    "duckdb>=1.0",
+    "pandas>=2.0",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["updown_audit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

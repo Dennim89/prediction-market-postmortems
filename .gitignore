@@ -12,3 +12,5 @@ venv/
 .env
 config.yaml
 data/
+*.duckdb
+*.duckdb.wal

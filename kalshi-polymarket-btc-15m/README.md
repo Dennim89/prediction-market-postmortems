@@ -126,7 +126,7 @@ The original project had about 52,000 lines of Go and Python. Only the collector
 |---|---|---|
 | Polymarket collector (Python) | Finds the current window, polls both order books, follows the Chainlink BTC/USD stream, writes raw JSONL and tick CSV | Yes: [collector/](collector/), cleaned up and tested offline. Its README lists the changes. |
 | Go bot, root package (about 17,000 lines) | Two-leg entries, rebalancing, exits, pre-expiry logic, simulation | No. It does not compile in our archive (three functions live in files that are not there), and it holds tuned settings. |
-| Kalshi client (Go) | RSA-PSS request signing, orders, WebSocket | No. It depends on the bot's package-level state. A tested Kalshi signing client may be published separately; this repository will link to it instead of keeping a second copy. |
+| Kalshi client (Go) | RSA-PSS request signing, orders, WebSocket | No. It depends on the bot's package-level state. A tested Kalshi signing client is published separately in the polymarket-wallet-analyzer repository, so this repository does not keep a second copy. |
 | Polymarket order clients (Go, Python) | Order placement and wrappers | No. They place real orders with keys, and the older Python wrappers target Polymarket's V1 order API, which Polymarket planned to replace on 2026-04-28. |
 | Fee and effective-price math | Cost of each leg after fees | No. The formulas were corrected during the project and were not checked against the venues' current fee schedules. |
 | Index approximation (`brti_approx.go`) | Approximates Kalshi's settlement index from public exchange feeds | No. It approximates a licensed index, and it is niche. |
